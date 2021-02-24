@@ -37,8 +37,7 @@ header label:hover {
   list-style-type: none;
   padding: 0;
   display: flex;
-  margin-left: 200px;
-
+  justify-content: center;
 }
 
 .menu li:hover {
@@ -126,7 +125,10 @@ header label:hover {
   font-size: 30px;
   outline: none;
   display: flex;
-  margin-left: 600px;
+  position:relative;
+  left: 40%;
+
+
 }
 
 a {
@@ -157,7 +159,7 @@ h4 {
   font-size: 50px;
 }
 
-.teamGrieta {
+#teamGrieta {
 position: absolute;
 width: 190px;
 height: 137px;
@@ -166,8 +168,10 @@ top: 1050px;
 border: 40px;
 cursor: pointer;
 display:flex;
-
+flex-flow;
 }
+
+
 
 .teamFight {
  position: absolute;
@@ -178,7 +182,7 @@ top: 1200px;
 cursor: pointer;
 display:flex;
 }
-
+/*
 .team1 {
 position: absolute;
 
@@ -196,7 +200,7 @@ text-align: center;
 color: #000000;
 
 }
-
+*/
 .team2 {
   position: absolute;
 
@@ -242,7 +246,7 @@ color: #000000;
   .menu {
     position: absolute;
     background: #004585;
-    width: 60%;
+    width: 40%;
     margin-left: -60%;
   }
 

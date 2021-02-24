@@ -37,6 +37,8 @@ header label:hover {
   list-style-type: none;
   padding: 0;
   display: flex;
+  margin-left: 200px;
+
 }
 
 .menu li:hover {
@@ -49,6 +51,8 @@ header label:hover {
   color: #fff;
   text-decoration: none;
   font-family: 'Viga', sans-serif;
+  flex-grow: 2;
+  text-align: center;
 }
 
 
@@ -66,7 +70,7 @@ header label:hover {
   width: 125px;
   height: 40px;
   transition: all 700ms ease;
-
+  margin-left: 50px;
 }
 
 .play-boton:hover {
@@ -134,7 +138,7 @@ a {
   left: 300px;
 }
 .champion-boton:hover {
-  background: #e4cf18;
+  background: #004585;
 }
 
 

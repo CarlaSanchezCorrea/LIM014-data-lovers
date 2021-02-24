@@ -45,15 +45,58 @@ const mostrarImagen = (dataImg) => {
         <th>stats</td>
         <th>per lvl</td>
         <th>lvl 1</td>
-        <th>lvl 3</td>
+        <th>lvl 6</td>
+        <th>lvl 12</td>
+        <th>lvl 20</td>
       </tr>
 
       <tr>
         <th>hp</td>
         <td>${campeones.stats.hpperlevel}</td>
         <td>${campeones.stats.hp}</td>
-        <td>${formula(514.4, 80, 3)}</td>
+        <td>${formula(6, arrayChamps, 1)}</td>
+        <td>${formula(12, arrayChamps, 1)}</td>
+        <td>${formula(18, arrayChamps, 1)}</td>
       </tr>
+
+      <tr>
+        <th>hpregen</td>
+        <td>${campeones.stats.hpregen}</td>
+        <td>${campeones.stats.hpregenperlevel}</td>
+        <td>${formula(6, arrayChamps, 2)}</td>
+        <td>${formula(12, arrayChamps, 2)}</td>
+        <td>${formula(18, arrayChamps, 2)}</td>
+      </tr>
+
+
+      <tr>
+        <th>mp</td>
+        <td>${campeones.stats.mpperlevel}</td>
+        <td>${campeones.stats.mp}</td>
+        <td>${formula(6, arrayChamps,3)}</td>
+        <td>${formula(12, arrayChamps,3)}</td>
+        <td>${formula(18, arrayChamps, 3)}</td>
+      </tr>
+
+      <tr>
+      <th>armor</td>
+        <td>${campeones.stats.armorperlevel}</td>
+        <td>${campeones.stats.armor}</td>
+        <td>${formula(6, arrayChamps, 4)}</td>
+        <td>${formula(12, arrayChamps, 4)}</td>
+        <td>${formula(18, arrayChamps, 4)}</td>
+      </tr>
+
+     <tr>
+      <th>spellblock</td>
+      <td>${campeones.stats.spellblockperlevel}</td>
+      <td>${campeones.stats.spellblock}</td>
+      <td>${formula(6, arrayChamps, 5)}</td>
+      <td>${formula(12, arrayChamps, 5)}</td>
+      <td>${formula(18, arrayChamps, 5)}</td>
+    </tr>
+
+
 
     </table>
 

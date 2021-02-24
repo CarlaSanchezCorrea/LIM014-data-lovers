@@ -120,13 +120,16 @@
 {   position: relative;
     display:block;
     height: 58.62px;
-    width: 500px;
-    margin: 0 10px 0 0;
+    width: 330px;
+    margin: 0 20px 0 0;
     background-color:rgba(196, 196, 196, 0.45);
-    border-radius:0;
+    border-radius: 3px;
     border: 1px solid #E3B309;
     box-sizing: border-box;
+    cursor: pointer;
 }
+
+
 #btn
 {   position: absolute;
     top: 4px;
@@ -179,7 +182,7 @@ margin: 50px  0;
   justify-content: center;
 }
 #selectLetter , #difficult-select{
-    margin-right:10px;
+    margin-right:20px;
     border-radius:5px;
     border: 1px solid #E3B309;
     box-sizing: border-box;
@@ -187,11 +190,26 @@ margin: 50px  0;
     height: 30px;
     font-size: medium;
     font-weight: 600;
+    cursor: pointer;
+    background-color: #f7e81c;
 }
+
+
 select:focus {
     outline: none;
 }
 
+#selectLetter:hover{
+  background-color: #004585;
+  color: #fff;
+  border: #10e8f0;
+}
+
+#difficult-select:hover{
+  background-color: #004585;
+  color: #fff;
+  border: #10e8f0;
+}
 
 
 
@@ -221,7 +239,6 @@ figure{
 figcaption{
     position: relative;
     top: -4px;
-
     background-color: #061C25;;
     color: #fff;
     text-align: center;
@@ -235,11 +252,12 @@ figcaption{
 
 figcaption:hover{
     background-color: #006680;
+    transform:scale(1);
     cursor: pointer;
 }
 
 .splash:hover{
-    transform:scale(0.98);
+    transform:scale(0.97);
     cursor: pointer;
 }
 
@@ -264,19 +282,18 @@ figcaption:hover{
   justify-content: center;
   align-items:center;
   cursor: pointer;
-
+  margin: 20px;
+  padding: 0;
 }
 
 .roles_li:hover {
   border-bottom: 5px solid #f8e918;
   cursor: pointer;
-  margin-bottom: 5px;
-  margin-right: 10px;
+  margin-bottom: 2px;
   padding: 0;
 }
 
 
-/*Modal*/
 
  /*.overlay{
 
@@ -302,6 +319,8 @@ position: relative;
 top:80px;
 left:50vh;
 }*/
+
+/*Modal*/
 
 .btn_cerrar{
     position:absolute;
@@ -415,14 +434,35 @@ top: 290px;
   text-transform:uppercase;
   color:#fff;
 
+  border-collapse: collapse;
+
+  font-family: Mirza;
+  font-style: normal;
+  font-weight: normal;
 
 }
 
 
-.default tr:nth-child(even){color: #5FB1FD;}
+.default td{
+  color: #5FB1FD;
+  text-align: center;
+}
 .default th {
   color: #EBC12B;
 }
+
+td, th {
+  border: 1px solid #EBC12B;
+  box-shadow: 0 0 12px #EBC12B,
+              0 0 4px #EBC12B,
+              0 0 6px #EBC12B;
+
+  text-align: left;
+  padding: 8px;
+  padding: 0 10px 2px;
+}
+
+
 
 
 

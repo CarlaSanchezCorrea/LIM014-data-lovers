@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mirza&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 100ms ease-in;
+  -moz-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+  pointer-events: none;
+  display: flex;
+}
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+.modalDialog > section {
+  max-width: 800px;
+  width: 90%;
+  height: 90%;
+  position: relative;
+  margin: 15px;
+  margin-top: 30px;
+  left: 40vh;
+  border-radius: 3px;
+  background: rgb(7, 7, 7);
+  margin-bottom: 20px;
+}
+
+.close {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e98707;
+  color: #fff;
+  line-height: 25px;
+  position: absolute;
+  /*right: -12px;*/
+  text-align: center;
+  /*top: -10px;*/
+  width: 34px;
+  height: 34px;
+  text-decoration: none;
+  font-weight: bold;
+  /*-webkit-border-radius: 50%;*/
+  /*-moz-border-radius: 50%;*/
+  border-radius: 50%;
+  /*-moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;*/
+  box-shadow: 1px 1px 3px #000;
+  padding-top: 5px;
+  left: 780px;
+  top: -10px;
+}
+.close:hover {
+  background: #e98707;
+}
+
+
+.contenedor_2{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+}
+.fondo_gris{
+    background: rgba(196, 196, 196, 0.2);
+    height: 260px;
+    margin-bottom: 70px ;
+
+}
+
+/*Título*/
+#titulo{
+    font-family: Bungee Inline;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 120px;
+    text-align: center;
+
+    width: 80%;
+    align-self: center;
+    margin: 80px  0 0 0 ;
+    padding:0;
+
+}
+#sub{
+
+    font-family: Mirza;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+
+    width: 70%;
+    align-self: center;
+    margin: 0 200px ;
+}
+/*Búsqueda*/
+.search-box
+{   position: relative;
+    display:block;
+    height: 58.62px;
+    width: 500px;
+    margin: 0 10px 0 0;
+    background-color:rgba(196, 196, 196, 0.45);
+    border-radius:0;
+    border: 1px solid #E3B309;
+    box-sizing: border-box;
+}
+#btn
+{   position: absolute;
+    top: 4px;
+    right: 4px;
+    background:transparent;
+    color: #000;
+
+    line-height: 24px;
+    border-radius:50%;
+    text-align: center;
+    padding: 15px;
+    transition:.7 ease;
+}
+#btn:active{
+    transform:scale(0.78);
+}
+#keyword{
+    background:none;
+    border:none;
+    color:#000;
+    height:62px;
+    width:100%;
+    font-size:16px;
+    text-align: start;
+    position: relative  ;
+    left : 10px;
+
+}
+
+input:focus {
+    outline: none;
+}
+/*Contenedor Filtro Nombre/Roles/Dificultad*/
+.choose{
+display:flex;
+flex-flow:row wrap;
+align-items: center;
+justify-content: center;
+margin: 50px  0;
+}
+.options{
+    display:flex;
+    flex-flow:row wrap;
+
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#selectLetter , #difficult-select{
+    margin-right:10px;
+    border-radius:5px;
+    border: 1px solid #E3B309;
+    box-sizing: border-box;
+    width: 110px;
+    height: 30px;
+    font-size: medium;
+    font-weight: 600;
+}
+select:focus {
+    outline: none;
+}
+
+
+
+
+/*Galeria*/
+
+.flex-wrap{
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 45px;
+
+}
+.splash {
+ /* display: flex;
+  flex-flow: row wrap;*/
+  width: 298px;
+  height: 265px;
+}
+
+figure{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+figcaption{
+    position: relative;
+    top: -4px;
+
+    background-color: #061C25;;
+    color: #fff;
+    text-align: center;
+    width: 298px;
+    font-family: Audiowide;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: upperCase;
+    font-size: 20px;
+}
+
+figcaption:hover{
+    background-color: #006680;
+    cursor: pointer;
+}
+
+.splash:hover{
+    transform:scale(0.98);
+    cursor: pointer;
+}
+
+
+
+
+/*Roles*/
+#rolesCampeones{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap:wrap;
+  }
+
+.roles_li {
+  font-family: Bungee Inline;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  border: none;
+  background: none;
+  justify-content: center;
+  align-items:center;
+  cursor: pointer;
+
+}
+
+.roles_li:hover {
+  border-bottom: 5px solid #f8e918;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  padding: 0;
+}
+
+
+/*Modal*/
+
+ /*.overlay{
+
+    position: fixed;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, .5);
+z-index:100;
+justify-content:center;
+align-items:center;
+display: none;
+  }
+
+
+.overlay .slideShow{
+    width:55%;
+    height:80%;
+background-color:rgba(9, 15, 15, 0.9);
+color:#000;
+position: relative;
+top:80px;
+left:50vh;
+}*/
+
+.btn_cerrar{
+    position:absolute;
+    top: -15px;
+    right:-15px;
+    font-size:35px;
+    font-weight: bold;
+
+background-color:  #EBC12B;
+color :#fff;
+width:30px;
+height:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+padding: 5px;
+transition: all .1s ease;
+}
+
+.btn_cerrar:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+
+.imgModal{
+
+  width:100%;
+  height:46%;
+  object-fit: fill;
+}
+
+.modal{
+position:relative;
+top:-90px;
+color:rgb(3, 3, 3);
+text-transform:uppercase;
+display:flex;
+flex-flow: column;
+align-items:center;
+justify-content: center;
+
+}
+#title{
+  font-family: Mirza;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing:4px;
+color: #fff;
+border-bottom: 3px solid #fff;
+margin-bottom:7px;
+bottom: 100px;
+align-items: center;
+position: relative;
+}
+#name{
+  font-family: Audiowide;
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+line-height: 51px;
+text-align: center;
+color: #fff;
+bottom: 100px;
+position: relative;
+}
+
+
+#description {
+  font-family: Mirza;
+  font-style: normal;
+  font-size: 17px;
+  color: #EBC12B;
+  text-align: justify;
+  position: absolute;
+  height: 93.17px;
+width: 376px;
+left: 380px;
+top: 290px;
+}
+
+#rol {
+  font-family: Viga;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 24px;
+    text-align: center;
+    color: #FF511A;
+    position: absolute;
+    width: 164.06px;
+    height: 25.48px;
+    left: 62px;
+    top: 320px;
+}
+
+.default{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+
+  position:relative;
+  top:50px;
+  bottom:0px;
+
+  text-transform:uppercase;
+  color:#fff;
+
+
+}
+
+
+.default tr:nth-child(even){color: #5FB1FD;}
+.default th {
+  color: #EBC12B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 800px){
+  #Aatrox1{
+    flex: 20%;
+    max-width: 30%;
+  }
+
+  .botones {
+    font-size: 55px;
+  }
+
+  .atras{
+    left: 5px;
+  }
+
+  .adelante{
+    right: 5px;
+  }
+
+  .slideShow img{
+    width: 90%;
+  }
+}

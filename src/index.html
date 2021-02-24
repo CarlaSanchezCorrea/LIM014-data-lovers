@@ -2,11 +2,58 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial scale=1, maximun-scale=1, minimum-scale=1">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <header>
+      <!--<div id="root"></div>-->
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu"><i class="fas fa-bars"></i>
+      </label>
+        <nav class="menu">
+          <ul>
+            <li><a href="#">APRENDE A JUGAR</a></li>
+            <li><a href="campeones-page.html">CAMPEONES</a></li>
+            <li><a href="#">RANKING TOP 10</a></li>
+            <li><a href="#">NOVEDADES</a></li>
+            <li><a href="#">TIENDA</a></li>
+            <li><a href="#">INICIAR SESIÓN</a></li>
+            <a href=""><img src="img/lol.png" class="icon" alt=""></a>
+            <button class="play-boton">JUGAR AHORA</button>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <div id="screen1" class="display-screen">
+        <div >
+            <img src="img/portada.gif" class="gifContainer" width="100%" height="50%">
+        </div>
+        <div class="container">
+          <img src="img/lol-portada.png" class="logo">
+        </div>
+
+          <button class="champion-boton">
+            <a href="campeones-page.html" class="btn1">Conoce a tus CAMPEONES</a>
+          </button>
+
+        <h4 class="title">APRENDE A JUGAR</h4>
+        <div id="teamGrieta">
+            <img src="img/grieta-del-Invocador.jpeg" class="teamGrieta">
+            <p class="team1">Combates todos contra todos y conoce a más usuarios de todo el mundo</p>
+          </div>
+          <div id="teamFight">
+            <img src="img/teamfight_tactics.png" class="teamFight">
+            <p class="team2">Reune a tu equipo de campeones ideal para que luchen por ti</p>
+          </div>
+      </div>
+    </section>
+      <footer class="footer"><img src="img/REDES SOCIALES.png" class="redes"><img src="img/APPSTORE 1.png" class="appstore"><img src="img/PLAYSTORE 1.png" class="playstore">
+      </footer>
+
+
   </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial scale=1, maximun-scale=1, minimum-scale=1"
+    />
+    <title>Campeones Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-campeones-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style-media-screen.css" />
+  </head>
+  <body>
+
+    <!--div class ="overlay">
+      <div class="slideShow">
+        <span class="btn_cerrar">&times;</span>
+        <img src="" alt="" id="img_slideShow">
+        <h2 id="title" class="modal">Nombre</h2>
+        <h1 id="name" class="modal">Titulo</h1>
+        <p id="description">Description</p>
+        <p id="srcset">ROLES</p>
+
+    </div>
+  </div-->
+    <header>
+      <input type="checkbox" id="btn-menu" />
+      <label for="btn-menu"><i class="fas fa-bars"></i> </label>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">APRENDE A JUGAR</a></li>
+          <li><a href="campeones-page.html">CAMPEONES</a></li>
+          <li><a href="#">RANKING TOP 10</a></li>
+          <li><a href="#">NOVEDADES</a></li>
+          <li><a href="#">TIENDA</a></li>
+          <li><a href="#">INICIAR SESIÓN</a></li>
+          <a href=""><img src="img/lol.png" class="icon" alt="" /></a>
+          <button class="play-boton">JUGAR AHORA</button>
+        </ul>
+      </nav>
+    </header>
+    <div id="screen2" class="hide-screen">
+      <div class="fondo_gris">
+        <section class="contenedor_2">
+          <h1 id="titulo">Conoce a tus Campeones</h1>
+        </section>
+      </div>
+      <section>
+        <p id="sub">Serán tus mejores aliados para ganar las batallas</p>
+      </section>
+    </div>
+
+
+<!-- Search-->
+<section class="choose">
+      <div class="search-box">
+          <input type="type" id="keyword" autocomplete="off" placeholder="Busca tu campeón"/>
+        <div id="btn" ;>
+          <i class="fas fa-search" width="100%" height="50%" id="btn-i"></i>
+        </div>
+      </div>
+
+
+      <div class="options">
+          <!-- Order Select-->
+            <div>
+              <select name="order" id="selectLetter"  class="order-select">
+                <option value="" disabled selected class="order-select">Ordenar</option>      <!--<Esta va ser la primera opcion y no queremos que el usuario lo escoja, sino a partir del A-Z-->
+                <option value="orderAZ" class="order-select">A-Z</option>
+                <option value="orderZA" class="order-select">Z-A</option>
+              </select>
+            </div>
+          <!-- Difficult Select-->
+          <div class="difficult-select">
+            <select name="difficultOrder" id="difficult-select">
+              <option value="" disabled selected class="difficult-select">Dificultad</option>      <!--<Esta va ser la primera opcion y no queremos que el usuario lo escoja, sino a partir del A-Z-->
+              <option id="higher" value="higher" class="difficult-select">ALTO</option>
+              <option id="low" value="low" class="difficult-select">BAJO</option>
+            </select>
+            </div>
+      </div>
+
+
+    </section>
+    <!-- Roles-->
+
+      <div id="rolesCampeones">
+        <input type="button" value="All" id="All"  class="roles_li">
+        <input type="button" value="Assassin" id="Assassin"  class="roles_li">
+        <input type="button" value="Fighter" id="Fighter"  class="roles_li">
+        <input type="button" value="Marksman" id="Marksman"  class="roles_li">
+        <input type="button" value="Tank" id="Tank" class="roles_li">
+        <input type="button" value="Mage" id="Mage"  class="roles_li">
+        <input type="button" value="Support" id="Support"  class="roles_li">
+
+      </div>
+
+
+    <!-- Imágenes-->
+      <div id="mostrarPersonajes" class="flex-wrap">
+
+      </div>
+
+      <!--Modal-->
+      <section>
+        <div id="cartilla" class="modal-contain"></div>
+      </section>
+
+  </body>
+  <script src="main.js" type="module"></script>
+</html>

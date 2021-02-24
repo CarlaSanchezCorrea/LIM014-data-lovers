@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Mirza:wght@500&display=swap');
+
+/*HEADER - MENU*/
+* {
+  margin: 0;
+}
+
+header {
+  display:block;
+  width: 100%;
+  background: #004585;
+  position: fixed;
+  color: #ECBD17;
+  z-index: 10;
+}
+
+#btn-menu {
+  display: none;
+}
+
+header label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+
+header label:hover {
+  cursor: pointer;
+  background: rgba(13, 192, 224, 0.705);
+}
+
+.menu ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu li:hover {
+  background: rgba(13, 192, 224, 0.705);
+
+}
+.menu li a {
+  display: block;
+  padding: 20px 30px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Viga', sans-serif;
+}
+
+
+
+.play-boton {
+  background-color: transparent;
+  color: red;
+  padding: 10px 0;
+  border: 2px solid red;
+  border-radius: 5px;
+  font-family: 'Viga', sans-serif;
+  font-size: small;
+  margin: 15px;
+  margin-top: 15px;
+  width: 125px;
+  height: 40px;
+  transition: all 700ms ease;
+
+}
+
+.play-boton:hover {
+    content: '';
+    background-color: red;
+    color:#fff;
+    cursor:pointer;
+    transition: all 700ms ease;
+}
+
+
+/*MAIN*/
+.gifContainer {
+  display:flex;
+  justify-content: center;
+}
+
+  /*
+  position: fixed;
+  display: flex;
+  bottom: 75%;
+  top: 35%;
+  left: 40%;
+  background-attachment: scroll;
+
+  */
+.container {
+  display: flex;
+  position: absolute;
+  bottom: 30%;
+  left: 40%;
+  width: 300px;
+  height: 150px;
+}
+
+.btn1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.champion-boton {
+  margin: 30px;
+  margin-top: 15px;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  color: #fff;
+  padding: 10px 0;
+  font-family:'Viga', sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 30px;
+  outline: none;
+  display: flex;
+  margin-left: 600px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  left: 300px;
+}
+.champion-boton:hover {
+  background: #e4cf18;
+}
+
+
+/*APRENDE A JUGAR*/
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h4 {
+  font-family: Bungee Inline;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+}
+
+.teamGrieta {
+position: absolute;
+width: 190px;
+height: 137px;
+left: 450px;
+top: 1050px;
+border: 40px;
+cursor: pointer;
+display:flex;
+
+}
+
+.teamFight {
+ position: absolute;
+width: 193px;
+height: 148px;
+left: 450px;
+top: 1200px;
+cursor: pointer;
+display:flex;
+}
+
+.team1 {
+position: absolute;
+
+width: 208.99px;
+height: 109.89px;
+left: 640px;
+top: 1050px;
+
+font-family: Mirza;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+color: #000000;
+
+}
+
+.team2 {
+  position: absolute;
+
+  width: 208.99px;
+  height: 82.42px;
+  left: 650px;
+  top: 1227px;
+
+  font-family: Mirza;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #000000;
+
+
+}
+
+
+/*FOOTER*/
+
+.footer {
+  width: 100%;
+    background-color: #000000;
+    padding: 10px;
+    margin-top: 80px;
+    text-align: center;
+    position: absolute;
+    width: 1332px;
+    height: 42.06px;
+    left: -3px;
+    top: 1300px;
+  }
+
+
+/*RESPONSIVE - MENU*/
+@media (max-width:768px){
+  header label {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    background: #004585;
+    width: 60%;
+    margin-left: -60%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu li {
+    border: 1px solid #fff;
+  }
+
+  #btn-menu:checked ~ .menu {    /*cuando el btn-menu tenga el checked va busca en html, la clase menu y va seleccionar todo lo que contenga esa clase*/
+    margin: 0;
+  }
+  .play-boton{
+    position: fixed;
+    top: -9.5px;
+    right: -5px;
+  }
+  .icon{
+    position: fixed;
+    top: -2.5px;
+    right: 250px;
+}
+
+
+}
+
+
+/*Para la medida exacta del Iphone 11*/
+
+@media (max-width:810px){
+  .container {
+    display: flex;
+    bottom: 76%;
+    left: 30%;
+    width: 200px;
+    height: 100px;
+  }
+
+  .title {
+    display: flex;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+}
+
+
+@media (max-width: 783px) {
+  .teamGrieta {
+      display: flex;
+      width: 175px;
+      height: 110px;
+      left: 90px;
+      top: 600px;
+    }
+
+    .teamFight {
+      display: flex;
+    width: 175px;
+    height: 120px;
+    left: 90px;
+    top: 760px;
+    justify-content: center;
+    }
+    .team1 {
+      display: flex;
+    width: 177.06px;
+    height: 85.56px;
+    left: 280px;
+    top: 600px;
+    }
+
+    .team2 {
+      display: flex;
+    width: 177.06px;
+    height: 85.56px;
+    left: 280px;
+    top: 760px;
+    justify-content: center;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    text-align: center;
+    left: 20px;
+    top: 870px;
+  }
+}
+
+

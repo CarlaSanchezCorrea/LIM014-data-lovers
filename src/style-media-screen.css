@@ -1,0 +1,75 @@
+@media screen and (max-width:1020px){
+    #sub{
+      font-size: 30px;
+      margin: 0 130px ;
+    }
+    }
+  @media screen and (max-width:915px){
+    #titulo{
+      font-size: 80px;
+    }
+    #sub{
+      font-size: 25px;
+      margin: 0 100px;
+    }
+    }
+    @media screen and (max-width:768px){
+
+      .play-boton{
+        position: fixed;
+        top: -9.5px;
+        right: -5px;
+      }
+    }
+    @media screen and (max-width:735px){
+      #titulo{
+        font-size: 70px;
+      }
+    }
+    @media screen and (max-width:642px){
+      #titulo{
+        font-size: 60px;
+      }
+    }
+
+
+  @media screen and (max-width:550px){
+    #titulo{
+      font-size: 52px;
+      }
+
+    }
+  @media screen and (max-width:500px){
+    #titulo{
+      font-size: 45px;
+    }
+    }
+   @media screen and (max-width:450px){
+    #titulo{
+      font-size: 45px;
+      }
+      }
+    @media screen and (max-width:450px){
+      #titulo{
+      font-size: 45px;
+      }
+    }
+    @media screen and (max-width:410px){
+      #titulo{
+        font-size: 40px;
+        }
+      #sub{
+        position: relative;
+        left: -30px;
+      }
+      }
+      @media screen and (max-width:368px){
+        #titulo{
+          font-size: 30px;
+          }
+        #sub{
+          font-size: 20px;
+          position: relative;
+          left: -30px;
+        }
+        }

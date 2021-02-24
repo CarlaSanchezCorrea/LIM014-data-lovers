@@ -1,4 +1,4 @@
-import { suma, orderAZ, orderZA, orderHigher, orderLower, rolesCampeones, filtrarBusqueda} from '../src/data.js';
+import { suma, orderAZ, orderZA, orderHigher, orderLower, rolesCampeones, formula} from '../src/data.js';
 
 
 /*describe('Filtro de ordenAZ', () => {
@@ -134,11 +134,42 @@ describe('Filtro de los Roles de los Campeones', () =>{
   });
 });
 
-//Filtro Barra de Busqueda
-describe('Filtrar en el Buscador por el nombre del Campeon', () =>{
-  it('is a function', () =>{
-    expect(typeof filtrarBusqueda).toBe('function');
-  })
-})
+// Estadísticas - Tabla
+describe('Formula stats', () => {
+  it('is a function', () => {
+    expect(typeof formula).toBe('function');
+  });
+  const data = [
+    {
+          stats: {
+          hp: 537.8,
+          hpperlevel: 85,
+          mp: 105.6,
+          mpperlevel: 45,
+          armor: 24.384,
+          armorperlevel: 3.8,
+          spellblock: 32.1,
+          spellblockperlevel: 1.25,
+          hpregen: 6.59,
+          hpregenperlevel: 0.5,
+        },
+     },
+  ];
+  it('Debería retornar `1047.8	`', () => {
+    expect(formula(6, data, 1)).toEqual('1047.8');
+  });
+  it('Debería retornar `9.6`', () => {
+    expect(formula(6, data, 2)).toEqual('9.6');
+  });
+  it('Debería retornar `375.6`', () => {
+    expect(formula(6, data, 3)).toEqual('375.6');
+  });
+  it('Debería retornar `47.2`', () => {
+    expect(formula(6, data, 4)).toEqual('47.2');
+  });
+  it('Debería retornar `39.6`', () => {
+    expect(formula(6, data, 5)).toEqual('39.6');
+  });
+});
 
 

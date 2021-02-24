@@ -37,7 +37,7 @@ const mostrarImagen = (dataImg) => {
       <h2 id="title">${campeones.title}</h2>
       <h1 id="name">${campeones.name}</h1>
       <p id="description">${campeones.blurb}</p>
-      <p id="rol">${campeones.tags}</p>
+      <p id="rol"><small>ROL</small><br><br>${campeones.tags}</p>
 
       <table class="default">
 
@@ -192,6 +192,7 @@ mostrarDificultad.addEventListener('change', filtroOrderMayorMenor);
 
 
 
+
 //ORDENAR A-Z//
 
 const mostrarOrder = document.getElementById("selectLetter");
@@ -227,7 +228,7 @@ const rolesPorCampeones = document.querySelectorAll(".roles_li");
 rolesPorCampeones.forEach(boton => {
 	boton.addEventListener("click", (e) => {
     const roles = e.target.value;
-      console.log(roles);
+    //  console.log(roles);
 
       mostrarCampeones.innerHTML = '';
     if (roles === "All"){

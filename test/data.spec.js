@@ -23,7 +23,7 @@ describe('Formula Sumar', () => {
 });
 
 //Retorna solo si el name.value del objeto inician con Mayusculas
-//o si empiezan todos los name.valueen minuscula
+//o si empiezan todos los name.value en minuscula
 //Pero crea error si los name.valuepossen combinanciones de ambas
 describe('Formula orderAZ', () => {
   it('is a function', () => {

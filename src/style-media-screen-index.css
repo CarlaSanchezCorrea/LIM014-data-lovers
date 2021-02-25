@@ -1,10 +1,432 @@
-@media screen and (max-width:1060px){
+@media screen and (max-width:1125px){
     .container{
         position: absolute;
         bottom: 38%;
         left: 40%;
     }
+
+
+    .teamGrieta {
+        left: 350px;
+        top: 900px;
+      }
+
+      .team1 {
+      left: 550px;
+      top: 900px;
+      }
+      .teamFight {
+      left: 350px;
+      top: 1100px;
+      }
+      .team2 {
+      left: 550px;
+      top: 1100px;
     }
-@media screen and (max-width:1020px){
+    footer img{
+        position: relative;
+        right: 150px;
+       }
+    }
+@media screen and (max-width:1060px){
+    .teamGrieta {
+        left: 300px;
+        top: 850px;
+      }
+
+      .team1 {
+      left: 540px;
+      top: 850px;
+      }
+      .teamFight {
+      left: 300px;
+      top: 1100px;
+      }
+      .team2 {
+      left: 540px;
+      top: 1100px;
 
     }
+    footer img{
+     position: relative;
+     right: 150px;
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .container{
+        position: absolute;
+        bottom: 38%;
+        left: 35%;
+    }
+    .champion-boton {
+        left: 35%;
+      }
+
+      .teamGrieta {
+          left: 250px;
+          top: 850px;
+      }
+      .team1 {
+          left: 500px;
+          top: 850px;
+      }
+      .teamFight {
+          left: 250px;
+          top: 1100px;
+      }
+      .team2 {
+          left: 500px;
+          top: 1100px;
+
+      }
+      footer img{
+        position: relative;
+        left:-40px;
+       }
+
+  }
+
+  @media (max-width: 950px) {
+    .container{
+        position: absolute;
+        bottom: 43%;
+        left: 35%;
+    }
+
+      .teamGrieta {
+          left: 250px;
+          top: 800px;
+      }
+      .team1 {
+          left: 500px;
+          top: 800px;
+      }
+      .teamFight {
+          left: 250px;
+          top: 1000px;
+      }
+      .team2 {
+          left: 500px;
+          top: 1000px;
+
+      }
+      .footer {
+        margin-top: 0px;
+        top: 1120px;
+    }
+      footer img{
+        position: relative;
+        left: -200px;
+    }
+  }
+
+@media (max-width:920px){
+    .teamGrieta {
+        left: 200px;
+        top: 750px;
+    }
+    .team1 {
+        left: 450px;
+        top: 750px;
+    }
+    .teamFight {
+        left: 200px;
+        top: 950px;
+    }
+    .team2 {
+        left: 450px;
+        top: 950px;
+
+    }
+  }
+
+
+  @media (max-width:810px){
+    .container{
+        position: absolute;
+        bottom: 53%;
+        left: 35%;
+    }
+    .champion-boton {
+        width: 150px;
+        height: 80px;
+        font-size: 20px;
+      }
+
+    .teamGrieta {
+        left: 200px;
+        top: 680px;
+    }
+    .team1 {
+        left: 450px;
+        top: 680px;
+    }
+    .teamFight {
+        left: 200px;
+        top: 850px;
+    }
+    .team2 {
+        left: 450px;
+        top: 850px;
+
+    }
+    .footer {
+           top: 1020px;
+    }
+      footer img{
+        position: relative;
+        left: -250px;
+    }
+
+  }
+
+  @media (max-width:790px){
+    .teamGrieta {
+        left: 200px;
+        top: 620px;
+    }
+    .team1 {
+        left: 450px;
+        top: 620px;
+    }
+    .teamFight {
+        left: 200px;
+        top: 800px;
+    }
+    .team2 {
+        left: 450px;
+        top: 800px;
+    }
+    .footer {
+        top: 1000px;
+ }
+   footer img{
+     position: relative;
+     left: -300px;
+ }
+  }
+  @media (max-width:750px){
+    .teamGrieta {
+        left: 150px;
+        top: 600px;
+    }
+    .team1 {
+        left: 400px;
+        top: 600px;
+    }
+    .teamFight {
+        left: 150px;
+        top: 800px;
+    }
+    .team2 {
+        left: 400px;
+        top: 800px;
+
+    }
+  }
+  @media (max-width:660px){
+    .teamGrieta {
+        left: 150px;
+        top: 560px;
+    }
+    .team1 {
+        left: 400px;
+        top: 560px;
+    }
+    .teamFight {
+        left: 150px;
+        top: 750px;
+    }
+    .team2 {
+        left: 400px;
+        top: 750px;
+    }
+    .footer {
+        top: 950px;
+ }
+   footer img{
+     position: relative;
+     left: -350px;
+ }
+  }
+  @media (max-width:630px){
+    .teamGrieta {
+        left: 100px;
+        top: 540px;
+    }
+    .team1 {
+        left: 350px;
+        top: 540px;
+        font-size:18px;
+    }
+    .teamFight {
+        left: 100px;
+        top: 700px;
+    }
+    .team2 {
+        left: 350px;
+        top: 700px;
+        font-size:18px;
+    }
+    .footer {
+        top: 870px;
+        left:0;
+ }
+   footer img{
+     position: relative;
+     left: -400px;
+ }
+  }
+  @media (max-width:550px){
+    .container{
+        position: absolute;
+        bottom: 58%;
+        left: 28%;
+    }
+    .champion-boton {
+        width: 150px;
+        height: 80px;
+        font-size: 20px;
+        left:30%;
+      }
+    .teamGrieta {
+        left: 90px;
+        top: 500px;
+    }
+    .team1 {
+        left: 300px;
+        top: 500px;
+        font-size:18px;
+    }
+    .teamFight {
+        left: 90px;
+        top: 650px;
+    }
+    .team2 {
+        left: 300px;
+        top: 650px;
+        font-size:18px;
+    }
+    .footer{
+        left:0;
+    }
+    .footer {
+        top: 800px;
+ }
+   footer img{
+     position: relative;
+     left: -400px;
+  }
+  }
+
+  @media (max-width:500px){
+    .champion-boton {
+        width: 110px;
+        height: 80px;
+        font-size: 18px;
+        left:30%;
+      }
+    .teamGrieta {
+        width:150px;
+        height:120px;
+        left: 85px;
+        top: 460px;
+    }
+    .team1 {
+        left: 250px;
+        top: 460px;
+        font-size:16px;
+    }
+    .teamFight {
+        width:150px;
+        left: 85px;
+        top: 620px;
+    }
+    .team2 {
+        left: 250px;
+        top: 620px;
+        font-size:17px;
+    }
+    .footer{
+        left:0;
+    }
+}
+  @media (max-width:450px){
+    .container{
+        position: absolute;
+        top: 18%;
+        left: 20%;
+    }
+    .champion-boton {
+        width: 110px;
+        height: 70px;
+        font-size: 15px;
+        left:30%;
+      }
+    .teamGrieta {
+        width:120px;
+        height:100px;
+        left: 60px;
+        top: 420px;
+    }
+    .team1 {
+        left: 200px;
+        top: 420px;
+        font-size:14px;
+    }
+    .teamFight {
+        width:120px;
+        height:100px;
+        left: 60px;
+        top: 550px;
+    }
+    .team2 {
+        left: 200px;
+        top: 550px;
+        font-size:14px;
+    }
+    .footer {
+        top: 700px;
+    }
+    footer img{
+    left: -450px;
+    }
+  }
+  @media (max-width:360px){
+    .container{
+        position: absolute;
+        top: 18%;
+        left: 20%;
+    }
+    .champion-boton {
+        width: 110px;
+        height: 70px;
+        font-size: 15px;
+        left:30%;
+      }
+    .teamGrieta {
+        width:120px;
+        height:100px;
+        left: 60px;
+        top: 420px;
+    }
+    .team1 {
+        left: 200px;
+        top: 420px;
+        font-size:14px;
+    }
+    .teamFight {
+        width:120px;
+        height:100px;
+        left: 60px;
+        top: 550px;
+    }
+    .team2 {
+        left: 200px;
+        top: 550px;
+        font-size:14px;
+    }
+  }

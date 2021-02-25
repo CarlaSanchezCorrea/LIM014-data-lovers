@@ -61,7 +61,7 @@
         bottom: 38%;
         left: 35%;
     }
-    .champion-boton {
+    .champion-button {
         left: 35%;
       }
 
@@ -150,7 +150,7 @@
         bottom: 53%;
         left: 35%;
     }
-    .champion-boton {
+    .champion-button {
         width: 150px;
         height: 80px;
         font-size: 20px;
@@ -286,7 +286,7 @@
         bottom: 58%;
         left: 28%;
     }
-    .champion-boton {
+    .champion-button {
         width: 150px;
         height: 80px;
         font-size: 20px;
@@ -323,7 +323,7 @@
   }
 
   @media (max-width:500px){
-    .champion-boton {
+    .champion-button {
         width: 110px;
         height: 80px;
         font-size: 18px;
@@ -360,7 +360,7 @@
         top: 18%;
         left: 20%;
     }
-    .champion-boton {
+    .champion-button {
         width: 110px;
         height: 70px;
         font-size: 15px;
@@ -401,7 +401,7 @@
         top: 18%;
         left: 20%;
     }
-    .champion-boton {
+    .champion-button {
         width: 110px;
         height: 70px;
         font-size: 15px;

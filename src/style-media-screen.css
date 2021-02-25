@@ -73,3 +73,46 @@
           left: -30px;
         }
         }
+
+/*MODAL RESPONSIVE */
+
+        @media (max-width: 900px) {
+          .close {
+            left: 97%;
+          }
+        }
+
+        @media (max-width:900px) {
+          .modalDialog > section {
+            width: 70%;
+            left: 15%;
+            max-width: none;
+            margin-left: 0;
+          }
+
+          #description {
+            left: 340px;
+            top: 320px;
+            width: 40%;
+          }
+
+          .default{
+
+            text-align: left;
+            padding: 0 10px 2px;
+            top: 90px;
+          }
+        }
+
+        @media (max-width: 700px) {
+          #description {
+            left: 230px;
+            top: 320px;
+            width: 50%;
+          }
+
+          #rol {
+            font-size: 25px;
+          }
+        }
+

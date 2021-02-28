@@ -25,25 +25,27 @@
             <li><a href="#">TOP 10</a></li>
             <li><a href="#">NEWS</a></li>
             <li><a href="#">SHOP</a></li>
-            <li><a href="#">SIGN IN</a></li>
+            <li><a href="index.html">SIGN IN</a></li>
             <a href=""><img src="img/lol.png" class="icon" alt=""></a>
-            <button class="play-button">PLAY NOW</button>
+            <button id="play">
+              <a href="index.html" class="play-button">PLAY NOW</a>
+            </button>
         </ul>
       </nav>
     </header>
     <!--Encabezado del contenido-->
     <section class="container-wrappe">
-      <div class="fondo_gris">
-        <article class="contenedor_2">
-          <h1 id="titulo">MEET YOUR CHAMPIONS</h1>
+      <div class="style-wrappe_background">
+        <article class="style-wrappe">
+          <h1 id="style-title">MEET YOUR CHAMPIONS</h1>
         </article>
       </div>
         <article>
-          <p id="sub">They will be your best allies to win the battles</p>
+          <p id="sytle-introduction">They will be your best allies to win the battles</p>
         </article>
     </section>
     <!-- Search || Options: A-Z/Z-A  || Options: Difficulty-->
-    <nav class="choose">
+    <nav class="style-nav">
       <!--Search-->
       <div class="search-box">
         <input type="type" id="keyword" autocomplete="off" placeholder="Search your champion"/>
@@ -55,7 +57,7 @@
       <section class="options">
         <!-- Order Select-->
           <div class="order-select">
-            <select name="order" id="selectLetter" >
+            <select name="order" id="select-letter" >
               <option value="" disabled selected >Order</option>      <!--<Esta va ser la primera opcion y no queremos que el usuario lo escoja, sino a partir del A-Z-->
               <option value="orderAZ" >A-Z</option>
               <option value="orderZA" >Z-A</option>
@@ -70,8 +72,6 @@
             </select>
           </div>
       </section>
-
-
     </nav>
     <!-- Roles-->
 
@@ -88,7 +88,7 @@
 
 
     <!-- Imágenes-->
-      <div id="mostrarPersonajes" class="flex-wrap">
+      <div id="gallery" class="flex-wrap">
 
       </div>
 

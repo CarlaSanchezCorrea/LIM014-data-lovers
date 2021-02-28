@@ -4,24 +4,24 @@ const add = a + b ;
 return add;
 }
 
-export const formula= (lvl, data, stats) =>{
+export const formula= (lvl, data, x) =>{
 //a= numero de lvl || b =array||c = condicion si es igual según el stats requerido
 for (let i = 0; i < data.length; i++) {
 
-  if(stats === 1){
-    return (Number.parseFloat(data[i].stats.hp) + (parseFloat(data[i].stats.hpperlevel) * lvl)).toFixed(1);
+  if(x === 1 ){
+    return (parseFloat(data[i].stats.hp) + (parseFloat(data[i].stats.hpperlevel) * lvl)).toFixed(1);
   }
-  else if(stats === 2){
-    return (Number.parseFloat(data[i].stats.hpregen) + (parseFloat(data[i].stats.hpregenperlevel) * lvl)).toFixed(1);
+  else if(x === 2){
+    return (parseFloat(data[i].stats.hpregen) + (parseFloat(data[i].stats.hpregenperlevel) * lvl)).toFixed(1);
   }
-  else if(stats === 3){
+  else if(x === 3){
     return (parseFloat(data[i].stats.mp) + (parseFloat(data[i].stats.mpperlevel) * lvl)).toFixed(1);
   }
-  else if(stats === 4){
-    return (Number.parseFloat(data[i].stats.armor) + (parseFloat(data[i].stats.armorperlevel) * lvl)).toFixed(1);
+  else if(x === 4){
+    return (parseFloat(data[i].stats.armor) + (parseFloat(data[i].stats.armorperlevel) * lvl)).toFixed(1);
   }
-  else if(stats === 5){
-    return (Number.parseFloat(data[i].stats.spellblock) + (parseFloat(data[i].stats.spellblockperlevel) * lvl)).toFixed(1);
+  else if(x === 5){
+    return (parseFloat(data[i].stats.spellblock) + (parseFloat(data[i].stats.spellblockperlevel) * lvl)).toFixed(1);
   }  else {
     return 0
   }
@@ -96,7 +96,7 @@ return result;
 
 //Roles
 
-export const rolesCampeones = (data, rol) => {
+export const rolesData = (data, rol) => {
   const filtrarRoles = data.filter((roles) => {
     return roles.tags.includes(rol);
   }

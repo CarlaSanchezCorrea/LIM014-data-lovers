@@ -1,4 +1,4 @@
-import {orderAZ, orderZA , orderHigher,orderLower, rolesCampeones, formula} from './data.js';
+import {orderAZ, orderZA , orderHigher,orderLower, rolesData, formula} from './data.js';
 //import { mostrarDif } from './data_2.js';
 
 import data from './data/lol/lol.js';
@@ -6,38 +6,38 @@ import data from './data/lol/lol.js';
 
 
 
-let traerCampeones = data.data;
-let arrayChamps = Object.values(traerCampeones);
-//console.log(traerCampeones);//
-const mostrarCampeones = document.getElementById("mostrarPersonajes");
+let dataChampions = data.data;
+let arrayChamps = Object.values(dataChampions);
+//console.log(dataChampions);//
+const galleryData = document.getElementById("gallery");
 
 
-//Mostrar Galería
+//Show Gallery & Data
 
-const mostrarImagen = (dataImg) => {
+const showData = (dataImg) => {
 
-  dataImg.forEach(campeones => {
+  dataImg.forEach(champions => {
 
-    mostrarCampeones.innerHTML +=
-    `<div id ="${campeones.id}" class="diff-${campeones.info.difficulty}">
+    galleryData.innerHTML +=
+    `<div id ="${champions.id}">
     <figure>
-    <a href="#${campeones.key}" class="modal-card" >
-    <img src="${campeones.splash}" class="splash" id="${campeones.id}"
-    title = "${campeones.title}" slot = "${campeones.blurb}"
-    tags = "${campeones.tags}">
+    <a href="#${champions.key}" class="modal-card" >
+    <img src="${champions.splash}" class="splash" id="${champions.id}"
+    title = "${champions.title}" slot = "${champions.blurb}"
+    tags = "${champions.tags}">
     </a>
-    <figcaption>${campeones.id}</figcaption>
+    <figcaption>${champions.id}</figcaption>
     </figure>
     </div>
 
-    <section id="${campeones.key}" class="modalDialog">
+    <section id="${champions.key}" class="modalDialog">
     <section>
       <a href="#close" title="Close" class="close">X</a>
-      <img src="${campeones.splash}" class="imgModal">
-      <h2 id="title">${campeones.title}</h2>
-      <h1 id="name">${campeones.name}</h1>
-      <p id="description">${campeones.blurb}</p>
-      <p id="rol"><small>ROL</small><br><br>${campeones.tags}</p>
+      <img src="${champions.splash}" class="imgModal">
+      <h2 id="title">${champions.title}</h2>
+      <h1 id="name">${champions.name}</h1>
+      <p id="description">${champions.blurb}</p>
+      <p id="rol"><small>ROL</small><br><br>${champions.tags}</p>
 
       <table class="default">
 
@@ -47,13 +47,13 @@ const mostrarImagen = (dataImg) => {
         <th>lvl 1</td>
         <th>lvl 6</td>
         <th>lvl 12</td>
-        <th>lvl 20</td>
+        <th>lvl 18</td>
       </tr>
 
       <tr>
-        <th>hp</td>
-        <td>${campeones.stats.hpperlevel}</td>
-        <td>${campeones.stats.hp}</td>
+        <th>hp</th>
+        <td>${champions.stats.hpperlevel}</td>
+        <td>${champions.stats.hp}</td>
         <td>${formula(6, arrayChamps, 1)}</td>
         <td>${formula(12, arrayChamps, 1)}</td>
         <td>${formula(18, arrayChamps, 1)}</td>
@@ -61,8 +61,8 @@ const mostrarImagen = (dataImg) => {
 
       <tr>
         <th>hpregen</td>
-        <td>${campeones.stats.hpregen}</td>
-        <td>${campeones.stats.hpregenperlevel}</td>
+        <td>${champions.stats.hpregen}</td>
+        <td>${champions.stats.hpregenperlevel}</td>
         <td>${formula(6, arrayChamps, 2)}</td>
         <td>${formula(12, arrayChamps, 2)}</td>
         <td>${formula(18, arrayChamps, 2)}</td>
@@ -71,8 +71,8 @@ const mostrarImagen = (dataImg) => {
 
       <tr>
         <th>mp</td>
-        <td>${campeones.stats.mpperlevel}</td>
-        <td>${campeones.stats.mp}</td>
+        <td>${champions.stats.mpperlevel}</td>
+        <td>${champions.stats.mp}</td>
         <td>${formula(6, arrayChamps,3)}</td>
         <td>${formula(12, arrayChamps,3)}</td>
         <td>${formula(18, arrayChamps, 3)}</td>
@@ -80,8 +80,8 @@ const mostrarImagen = (dataImg) => {
 
       <tr>
       <th>armor</td>
-        <td>${campeones.stats.armorperlevel}</td>
-        <td>${campeones.stats.armor}</td>
+        <td>${champions.stats.armorperlevel}</td>
+        <td>${champions.stats.armor}</td>
         <td>${formula(6, arrayChamps, 4)}</td>
         <td>${formula(12, arrayChamps, 4)}</td>
         <td>${formula(18, arrayChamps, 4)}</td>
@@ -89,8 +89,8 @@ const mostrarImagen = (dataImg) => {
 
      <tr>
       <th>spellblock</td>
-      <td>${campeones.stats.spellblockperlevel}</td>
-      <td>${campeones.stats.spellblock}</td>
+      <td>${champions.stats.spellblockperlevel}</td>
+      <td>${champions.stats.spellblock}</td>
       <td>${formula(6, arrayChamps, 5)}</td>
       <td>${formula(12, arrayChamps, 5)}</td>
       <td>${formula(18, arrayChamps, 5)}</td>
@@ -106,88 +106,148 @@ const mostrarImagen = (dataImg) => {
   })
 }
 
-mostrarImagen(arrayChamps) ;
+showData(arrayChamps) ;
 
 //Buscador
 let btn = document.getElementById("btn");
-let mostrarInputBusqueda = document.getElementById("keyword");
+let inputSearch = document.getElementById("keyword");
 
-const filtrarBusqueda = () => {
+const filterSearch = () => {
 
-  mostrarCampeones.innerHTML = '';
-  //console.log(mostrarInputBusqueda.value); //Aquí no Lee Console
+  galleryData.innerHTML = '';
+  //console.log(inputSearch.value); //Aquí no Lee Console
 
-  const texto = mostrarInputBusqueda.value.toLowerCase();
-  for(let campeones of arrayChamps){
-    let name = campeones.name.toLowerCase();
-    if(name.indexOf(texto) !== -1){
-      mostrarCampeones.innerHTML +=
-    `<div id ="${campeones.id}" class="diff-${campeones.info.difficulty}">
-    <figure>
-    <a href="#${campeones.key}" class="modal-card" >
-    <img src="${campeones.splash}" class="splash" id="${campeones.id}"
-    title = "${campeones.title}" slot = "${campeones.blurb}"
-    tags = "${campeones.tags}">
-    </a>
-    <figcaption>${campeones.id}</figcaption>
-    </figure>
-    </div>
+  const inputText = inputSearch.value.toLowerCase();
+  for(let champions of arrayChamps){
+    let name = champions.name.toLowerCase();
+    if(name.indexOf(inputText) !== -1){
+      galleryData.innerHTML +=
+      `<div id ="${champions.id}">
+      <figure>
+      <a href="#${champions.key}" class="modal-card" >
+      <img src="${champions.splash}" class="splash" id="${champions.id}"
+      title = "${champions.title}" slot = "${champions.blurb}"
+      tags = "${champions.tags}">
+      </a>
+      <figcaption>${champions.id}</figcaption>
+      </figure>
+      </div>
 
-    <section id="${campeones.key}" class="modalDialog">
-    <section>
-      <a href="#close" title="Close" class="close">X</a>
-      <img src="${campeones.splash}" class="imgModal">
-      <h2 id="title">${campeones.title}</h2>
-      <h1 id="name">${campeones.name}</h1>
-      <p id="description">${campeones.blurb}</p>
-      <p id="rol">${campeones.tags}</p>
+      <section id="${champions.key}" class="modalDialog">
+      <section>
+        <a href="#close" title="Close" class="close">X</a>
+        <img src="${champions.splash}" class="imgModal">
+        <h2 id="title">${champions.title}</h2>
+        <h1 id="name">${champions.name}</h1>
+        <p id="description">${champions.blurb}</p>
+        <p id="rol"><small>ROL</small><br><br>${champions.tags}</p>
 
-    </section>`;
-  }
+        <table class="default">
+
+        <tr>
+          <th>stats</td>
+          <th>per lvl</td>
+          <th>lvl 1</td>
+          <th>lvl 6</td>
+          <th>lvl 12</td>
+          <th>lvl 18</td>
+        </tr>
+
+        <tr>
+          <th>hp</th>
+          <td>${champions.stats.hpperlevel}</td>
+          <td>${champions.stats.hp}</td>
+          <td>${formula(6, arrayChamps, 1)}</td>
+          <td>${formula(12, arrayChamps, 1)}</td>
+          <td>${formula(18, arrayChamps, 1)}</td>
+        </tr>
+
+        <tr>
+          <th>hpregen</td>
+          <td>${champions.stats.hpregen}</td>
+          <td>${champions.stats.hpregenperlevel}</td>
+          <td>${formula(6, arrayChamps, 2)}</td>
+          <td>${formula(12, arrayChamps, 2)}</td>
+          <td>${formula(18, arrayChamps, 2)}</td>
+        </tr>
+
+
+        <tr>
+          <th>mp</td>
+          <td>${champions.stats.mpperlevel}</td>
+          <td>${champions.stats.mp}</td>
+          <td>${formula(6, arrayChamps,3)}</td>
+          <td>${formula(12, arrayChamps,3)}</td>
+          <td>${formula(18, arrayChamps, 3)}</td>
+        </tr>
+
+        <tr>
+        <th>armor</td>
+          <td>${champions.stats.armorperlevel}</td>
+          <td>${champions.stats.armor}</td>
+          <td>${formula(6, arrayChamps, 4)}</td>
+          <td>${formula(12, arrayChamps, 4)}</td>
+          <td>${formula(18, arrayChamps, 4)}</td>
+        </tr>
+
+       <tr>
+        <th>spellblock</td>
+        <td>${champions.stats.spellblockperlevel}</td>
+        <td>${champions.stats.spellblock}</td>
+        <td>${formula(6, arrayChamps, 5)}</td>
+        <td>${formula(12, arrayChamps, 5)}</td>
+        <td>${formula(18, arrayChamps, 5)}</td>
+      </tr>
+
+
+
+      </table>
+
+      </section>`;  }
 }
-if (mostrarCampeones.innerHTML === ''){
-  mostrarCampeones.innerHTML +=
+if (galleryData.innerHTML === ''){
+  galleryData.innerHTML +=
     `<div>
     <p>Campeon no encontrado</p>
     </div>`;
 }
 }
 
-mostrarInputBusqueda.addEventListener("keyup", filtrarBusqueda);
+inputSearch.addEventListener("keyup", filterSearch);
 
-btn.addEventListener('click', filtrarBusqueda);
+btn.addEventListener('click', filterSearch);
 
 //DIFICULTAD//
-const mostrarDificultad = document.getElementById("difficult-select");
+const difficulty = document.getElementById("difficult-select");
 
 const filtroOrderMayorMenor =() =>{
-  mostrarCampeones.innerHTML = '';
-  const valorDificultad = mostrarDificultad.value;
-// console.log(valorDificultad);
-  for(let campeones of orderHigher(arrayChamps)){
-  if(valorDificultad === "higher"){
-    mostrarCampeones.innerHTML += `<div id ="${campeones.id}" class="diff-${campeones.info.difficulty}">
+  galleryData.innerHTML = '';
+  const difficultyValue = difficulty.value;
+// console.log(difficultyValue);
+  for(let champions of orderHigher(arrayChamps)){
+  if(difficultyValue === "higher"){
+    galleryData.innerHTML += `<div id ="${champions.id}" class="diff-${champions.info.difficulty}">
     <figure>
-    <img src="${campeones.splash}" class="splash">
-    <figcaption>${campeones.id} - ${campeones.info.difficulty}</figcaption>
+    <img src="${champions.splash}" class="splash">
+    <figcaption>${champions.id} - ${champions.info.difficulty}</figcaption>
     </figure>
     </div>`;
   }
 }
-   if(valorDificultad === "low"){
-    for(let campeones of orderLower(arrayChamps)){
+   if(difficultyValue === "low"){
+    for(let champions of orderLower(arrayChamps)){
     //let arrayOrderNM = orderLower(arrayChamps);
    //console.log(arrayOrderNM);
-    mostrarCampeones.innerHTML += `<div id ="${campeones.id}" class="diff-${campeones.info.difficulty}">
+   galleryData.innerHTML += `<div id ="${champions.id}" class="diff-${champions.info.difficulty}">
     <figure>
-    <img src="${campeones.splash}" class="splash">
-    <figcaption>${campeones.id} - ${campeones.info.difficulty}</figcaption>
+    <img src="${champions.splash}" class="splash">
+    <figcaption>${champions.id} - ${champions.info.difficulty}</figcaption>
     </figure>
     </div>`;
   }
 }
 }
-mostrarDificultad.addEventListener('change', filtroOrderMayorMenor);
+difficulty.addEventListener('change', filtroOrderMayorMenor);
 //console.log(arrayOrderMN);
 
 
@@ -195,53 +255,53 @@ mostrarDificultad.addEventListener('change', filtroOrderMayorMenor);
 
 //ORDENAR A-Z//
 
-const mostrarOrder = document.getElementById("selectLetter");
+const selectOrder = document.getElementById("select-letter");
 
 const filtrarOrder = () => {
-  mostrarCampeones.innerHTML = '';
-  const valorOrder = mostrarOrder.value;
-  //const valorOrderZA = mostrarOrderZA.value;
- // console.log(valorOrder);
-  //console.log(valorOrderZA);
+  galleryData.innerHTML = '';
+  const orderValue = selectOrder.value;
+  //const orderValueZA = selectOrderZA.value;
+ // console.log(orderValue);
+  //console.log(orderValueZA);
 
-    if (valorOrder === "orderAZ"){
+    if (orderValue === "orderAZ"){
       let arrayOrderAZ = orderAZ(arrayChamps);
-       mostrarImagen(arrayOrderAZ)
+      showData(arrayOrderAZ)
     }
 
-    if (valorOrder === "orderZA"){
+    if (orderValue === "orderZA"){
       let arrayOrderZA = orderZA(arrayChamps);
         //let arrayOrderZA = orderZA(arrayChamps);
-        mostrarImagen(arrayOrderZA)
+        showData(arrayOrderZA)
     }
   }
 
-mostrarOrder.addEventListener('change', filtrarOrder);
+selectOrder.addEventListener('change', filtrarOrder);
 
 
 
 //ROLES
 
 
-const rolesPorCampeones = document.querySelectorAll(".roles_li");
+const rolChampion = document.querySelectorAll(".roles_li");
 
-rolesPorCampeones.forEach(boton => {
+rolChampion.forEach(boton => {
 	boton.addEventListener("click", (e) => {
     const roles = e.target.value;
     //  console.log(roles);
 
-      mostrarCampeones.innerHTML = '';
+    galleryData.innerHTML = '';
     if (roles === "All"){
-      mostrarImagen(arrayChamps)
+      showData(arrayChamps)
     }
      // if (roles === roles)
      else{
-        let filtroRol = rolesCampeones(arrayChamps, roles);
-        mostrarImagen(filtroRol)
+        let filtroRol = rolesData(arrayChamps, roles);
+        showData(filtroRol)
     }
   })
 });
-//console.log(rolesPorCampeones)
+//console.log(rolChampion)
 ///////////////////////////////////
 
 

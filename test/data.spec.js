@@ -1,4 +1,4 @@
-import { suma, orderAZ, orderZA, orderHigher, orderLower, rolesCampeones, formula} from '../src/data.js';
+import { suma, orderAZ, orderZA, orderHigher, orderLower, rolesData, formula} from '../src/data.js';
 
 
 /*describe('Filtro de ordenAZ', () => {
@@ -116,7 +116,7 @@ describe('Formula Bajo-Alto', () =>{
 // Solo funciona si Tag posee solo un elemento por Array
 describe('Filtro de los Roles de los Campeones', () =>{
   it('is a function', () =>{
-    expect(typeof rolesCampeones).toBe('function');
+    expect(typeof rolesData).toBe('function');
   });
   it('returns para Support`Leona, Kayle, Lulu`', () =>{
     const data =[
@@ -130,7 +130,7 @@ describe('Filtro de los Roles de los Campeones', () =>{
       { name: "Kayle", tags : "Support" },
       { name: "Lulu", tags:  "Support" },
     ];
-    expect(rolesCampeones(data, 'Support')).toEqual(dataTag);
+    expect(rolesData(data, 'Support')).toEqual(dataTag);
   });
 });
 

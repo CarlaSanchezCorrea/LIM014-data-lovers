@@ -35,10 +35,12 @@ describe('Formula orderAZ', () => {
       { name: "udyr" },
       { name: "chogath" },
       { name: "shaco" },
+      { name : "lux"},
     ];
     const dataAZ = [
       { name: "chogath" },
       { name: "lux" },
+      { name: "lux"},
       { name: "shaco" },
       { name: "udyr" },
     ];
@@ -53,6 +55,7 @@ describe('Formula orderZA', () => {
   it('returns `Viktor,Riven,Kayle,Anivia`', () => {
     const data = [
       { name: "Riven" },
+      { name: "Kayle" },
       { name: "Anivia" },
       { name: "Viktor" },
       { name: "Kayle" },
@@ -60,6 +63,7 @@ describe('Formula orderZA', () => {
     const dataAZ = [
       { name: "Viktor" },
       { name: "Riven" },
+      { name: "Kayle" },
       { name: "Kayle" },
       { name: "Anivia" },
     ];
@@ -75,12 +79,14 @@ describe('Formula Alto-Bajo', () =>{
   it('returns difficulty`9,8,4,3`' ,() => {
     const data = [
       { name: "Aatrox", info  :{difficulty : 4} },
+      { name: "maokai" , info :{difficulty : 8} },
       { name: "Elise" , info :{difficulty : 9} },
       { name: "maokai", info  :{difficulty : 8}  },
       { name: "Fiora" , info  :{difficulty : 3} },
     ];
     const dataHigher = [
       { name: "Elise", info  :{difficulty : 9} },
+      { name: "maokai" , info :{difficulty : 8} },
       { name: "maokai" , info :{difficulty : 8} },
       { name: "Aatrox", info  :{difficulty : 4}  },
       { name: "Fiora" , info  :{difficulty : 3} },
@@ -96,6 +102,7 @@ describe('Formula Bajo-Alto', () =>{
   });
   it('returns difficulty`3,5,7,9`' ,() => {
     const data = [
+      { name: "Talon", info  :{difficulty : 7}  },
       { name: "Amumu", info  :{difficulty : 3} },
       { name: "FiddleSticks" , info :{difficulty : 9} },
       { name: "Talon", info  :{difficulty : 7}  },
@@ -104,6 +111,7 @@ describe('Formula Bajo-Alto', () =>{
     const dataLower = [
       { name: "Amumu", info  :{difficulty : 3} },
       { name: "Tryndamere" , info :{difficulty : 5} },
+      { name: "Talon", info  :{difficulty : 7}  },
       { name: "Talon", info  :{difficulty : 7}  },
       { name: "FiddleSticks" , info  :{difficulty : 9} },
     ];
@@ -170,6 +178,10 @@ describe('Formula stats', () => {
   it('Debería retornar `39.6`', () => {
     expect(formula(6, data, 5)).toEqual('39.6');
   });
+  //Agregar retorno 0
+  it('Debería retornar `0`' , () => {
+    expect(formula(6,data,6)).toEqual(0);
+  })
 });
 
 

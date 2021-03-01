@@ -5,12 +5,14 @@ return add;
 }
 
 export const formula= (lvl, data, x) =>{
-//a= numero de lvl || b =array||c = condicion si es igual según el stats requerido
+
+  //a= numero de lvl || b =array||c = condicion si es igual según el stats requerido
 for (let i = 0; i < data.length; i++) {
 
   if(x === 1 ){
     return (parseFloat(data[i].stats.hp) + (parseFloat(data[i].stats.hpperlevel) * lvl)).toFixed(1);
   }
+
   else if(x === 2){
     return (parseFloat(data[i].stats.hpregen) + (parseFloat(data[i].stats.hpregenperlevel) * lvl)).toFixed(1);
   }
@@ -27,6 +29,8 @@ for (let i = 0; i < data.length; i++) {
   }
 }
 };
+
+
 
 
 //ORDEN AZ - ZA//

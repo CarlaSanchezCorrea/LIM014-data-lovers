@@ -199,8 +199,6 @@ const filterSearch = () => {
         <td>${formula(18, arrayChamps, 5)}</td>
       </tr>
 
-
-
       </table>
 
       </section>`;  }
@@ -292,7 +290,8 @@ rolChampion.forEach(boton => {
 
     galleryData.innerHTML = '';
     if (roles === "All"){
-      showData(arrayChamps)
+      let arrayOrderAZ = orderAZ(arrayChamps);
+      showData(arrayOrderAZ)
     }
      // if (roles === roles)
      else{

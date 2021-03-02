@@ -3,31 +3,33 @@ export const suma= (a,b) => {
 const add = a + b ;
 return add;
 }
+export const formula= (lvl, data,x) =>{
 
-export const formula= (lvl, data, x) =>{
-
+  let result = [];
   //a= numero de lvl || b =array||c = condicion si es igual según el stats requerido
 for (let i = 0; i < data.length; i++) {
 
   if(x === 1 ){
-    return (parseFloat(data[i].stats.hp) + (parseFloat(data[i].stats.hpperlevel) * lvl)).toFixed(1);
+    result.push(parseFloat(data[i].stats.hp) + (parseFloat(data[i].stats.hpperlevel) * lvl)).toFixed(1);
   }
 
   else if(x === 2){
-    return (parseFloat(data[i].stats.hpregen) + (parseFloat(data[i].stats.hpregenperlevel) * lvl)).toFixed(1);
+    result.push(parseFloat(data[i].stats.hpregen) + (parseFloat(data[i].stats.hpregenperlevel) * lvl)).toFixed(1);
   }
   else if(x === 3){
-    return (parseFloat(data[i].stats.mp) + (parseFloat(data[i].stats.mpperlevel) * lvl)).toFixed(1);
+    result.push(parseFloat(data[i].stats.mp) + (parseFloat(data[i].stats.mpperlevel) * lvl)).toFixed(1);
   }
   else if(x === 4){
-    return (parseFloat(data[i].stats.armor) + (parseFloat(data[i].stats.armorperlevel) * lvl)).toFixed(1);
+    result.push(parseFloat(data[i].stats.armor) + (parseFloat(data[i].stats.armorperlevel) * lvl)).toFixed(1);
   }
   else if(x === 5){
-    return (parseFloat(data[i].stats.spellblock) + (parseFloat(data[i].stats.spellblockperlevel) * lvl)).toFixed(1);
-  }  else {
+    result.push(parseFloat(data[i].stats.spellblock) + (parseFloat(data[i].stats.spellblockperlevel) * lvl)).toFixed(1);
+  } else {
     return 0
   }
-}
+    return result
+  }
+
 };
 
 

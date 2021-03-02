@@ -1,4 +1,4 @@
-import {orderAZ, orderZA , orderHigher,orderLower, rolesData, formula} from './data.js';
+import {orderAZ, orderZA , orderHigher,orderLower, rolesData} from './data.js';
 //import { mostrarDif } from './data_2.js';
 
 import data from './data/lol/lol.js';
@@ -17,6 +17,7 @@ const galleryData = document.getElementById("gallery");
 const showData = (dataImg) => {
 
   dataImg.forEach(champions => {
+    //console.log(champions);
 
     galleryData.innerHTML +=
     `<div id ="${champions.id}">
@@ -42,58 +43,58 @@ const showData = (dataImg) => {
       <table class="default">
 
       <tr>
-        <th>stats</td>
-        <th>per lvl</td>
-        <th>lvl 1</td>
-        <th>lvl 6</td>
-        <th>lvl 12</td>
-        <th>lvl 18</td>
+        <th>stats</th>
+        <th>per lvl</th>
+        <th>lvl 1</th>
+        <th>lvl 6</th>
+        <th>lvl 12</th>
+        <th>lvl 18</th>
       </tr>
 
       <tr>
-        <th>hp</th>
+      <th>hp</th>
         <td>${champions.stats.hpperlevel}</td>
         <td>${champions.stats.hp}</td>
-        <td>${formula(6, arrayChamps, 1)}</td>
-        <td>${formula(12, arrayChamps, 1)}</td>
-        <td>${formula(18, arrayChamps, 1)}</td>
+        <td>${((champions.stats.hp) +(champions.stats.hpperlevel*6)).toFixed(1)}</td>
+        <td>${((champions.stats.hp) +(champions.stats.hpperlevel*12)).toFixed(1)}</td>
+        <td>${((champions.stats.hp) +(champions.stats.hpperlevel*18)).toFixed(1)}</td>
       </tr>
 
       <tr>
-        <th>hpregen</td>
-        <td>${champions.stats.hpregen}</td>
+        <th>hpregen</th>
         <td>${champions.stats.hpregenperlevel}</td>
-        <td>${formula(6, arrayChamps, 2)}</td>
-        <td>${formula(12, arrayChamps, 2)}</td>
-        <td>${formula(18, arrayChamps, 2)}</td>
+        <td>${champions.stats.hpregen}</td>
+        <td>${((champions.stats.hpregen) +(champions.stats.hpregenperlevel*6)).toFixed(1)}</td>
+        <td>${((champions.stats.hpregen) +(champions.stats.hpregenperlevel*12)).toFixed(1)}</td>
+        <td>${((champions.stats.hpregen) +(champions.stats.hpregenperlevel*18)).toFixed(1)}</td>
       </tr>
 
 
       <tr>
-        <th>mp</td>
+        <th>mp</th>
         <td>${champions.stats.mpperlevel}</td>
         <td>${champions.stats.mp}</td>
-        <td>${formula(6, arrayChamps,3)}</td>
-        <td>${formula(12, arrayChamps,3)}</td>
-        <td>${formula(18, arrayChamps, 3)}</td>
+        <td>${((champions.stats.mp) +(champions.stats.mpperlevel*6)).toFixed(1)}</td>
+        <td>${((champions.stats.mp) +(champions.stats.mpperlevel*12)).toFixed(1)}</td>
+        <td>${((champions.stats.mp) +(champions.stats.mpperlevel*18)).toFixed(1)}</td>
       </tr>
 
       <tr>
-      <th>armor</td>
+      <th>armor</th>
         <td>${champions.stats.armorperlevel}</td>
         <td>${champions.stats.armor}</td>
-        <td>${formula(6, arrayChamps, 4)}</td>
-        <td>${formula(12, arrayChamps, 4)}</td>
-        <td>${formula(18, arrayChamps, 4)}</td>
+        <td>${((champions.stats.armor) +(champions.stats.armorperlevel*6)).toFixed(1)}</td>
+        <td>${((champions.stats.armor) +(champions.stats.armorperlevel*12)).toFixed(1)}</td>
+        <td>${((champions.stats.armor) +(champions.stats.armorperlevel*18)).toFixed(1)}</td>
       </tr>
 
-     <tr>
-      <th>spellblock</td>
+    <tr>
+      <th>spellblock</th>
       <td>${champions.stats.spellblockperlevel}</td>
       <td>${champions.stats.spellblock}</td>
-      <td>${formula(6, arrayChamps, 5)}</td>
-      <td>${formula(12, arrayChamps, 5)}</td>
-      <td>${formula(18, arrayChamps, 5)}</td>
+      <td>${((champions.stats.spellblock) +(champions.stats.spellblockperlevel*6)).toFixed(1)}</td>
+      <td>${((champions.stats.spellblock) +(champions.stats.spellblockperlevel*12)).toFixed(1)}</td>
+      <td>${((champions.stats.spellblock) +(champions.stats.spellblockperlevel*18)).toFixed(1)}</td>
     </tr>
 
 
@@ -111,6 +112,8 @@ showData(arrayChamps) ;
 //Buscador
 let btn = document.getElementById("btn");
 let inputSearch = document.getElementById("keyword");
+
+
 
 const filterSearch = () => {
 
@@ -145,58 +148,58 @@ const filterSearch = () => {
         <table class="default">
 
         <tr>
-          <th>stats</td>
-          <th>per lvl</td>
-          <th>lvl 1</td>
-          <th>lvl 6</td>
-          <th>lvl 12</td>
-          <th>lvl 18</td>
+          <th>stats</th>
+          <th>per lvl</th>
+          <th>lvl 1</th>
+          <th>lvl 6</th>
+          <th>lvl 12</th>
+          <th>lvl 18</th>
         </tr>
 
         <tr>
           <th>hp</th>
           <td>${champions.stats.hpperlevel}</td>
           <td>${champions.stats.hp}</td>
-          <td>${formula(6, arrayChamps, 1)}</td>
-          <td>${formula(12, arrayChamps, 1)}</td>
-          <td>${formula(18, arrayChamps, 1)}</td>
+          <td>${((champions.stats.hp) +(champions.stats.hpperlevel*6)).toFixed(1)}</td>
+          <td>${((champions.stats.hp) +(champions.stats.hpperlevel*12)).toFixed(1)}</td>
+          <td>${((champions.stats.hp) +(champions.stats.hpperlevel*18)).toFixed(1)}</td>
         </tr>
 
         <tr>
-          <th>hpregen</td>
-          <td>${champions.stats.hpregen}</td>
+          <th>hpregen</th>
           <td>${champions.stats.hpregenperlevel}</td>
-          <td>${formula(6, arrayChamps, 2)}</td>
-          <td>${formula(12, arrayChamps, 2)}</td>
-          <td>${formula(18, arrayChamps, 2)}</td>
+          <td>${champions.stats.hpregen}</td>
+          <td>${((champions.stats.hpregen) +(champions.stats.hpregenperlevel*6)).toFixed(1)}</td>
+          <td>${((champions.stats.hpregen) +(champions.stats.hpregenperlevel*12)).toFixed(1)}</td>
+          <td>${((champions.stats.hpregen) +(champions.stats.hpregenperlevel*18)).toFixed(1)}</td>
         </tr>
 
 
         <tr>
-          <th>mp</td>
+          <th>mp</th>
           <td>${champions.stats.mpperlevel}</td>
           <td>${champions.stats.mp}</td>
-          <td>${formula(6, arrayChamps,3)}</td>
-          <td>${formula(12, arrayChamps,3)}</td>
-          <td>${formula(18, arrayChamps, 3)}</td>
+          <td>${((champions.stats.mp) +(champions.stats.mpperlevel*6)).toFixed(1)}</td>
+          <td>${((champions.stats.mp) +(champions.stats.mpperlevel*12)).toFixed(1)}</td>
+          <td>${((champions.stats.mp) +(champions.stats.mpperlevel*18)).toFixed(1)}</td>
         </tr>
 
         <tr>
-        <th>armor</td>
+        <th>armor</th>
           <td>${champions.stats.armorperlevel}</td>
           <td>${champions.stats.armor}</td>
-          <td>${formula(6, arrayChamps, 4)}</td>
-          <td>${formula(12, arrayChamps, 4)}</td>
-          <td>${formula(18, arrayChamps, 4)}</td>
+          <td>${((champions.stats.armor) +(champions.stats.armorperlevel*6)).toFixed(1)}</td>
+          <td>${((champions.stats.armor) +(champions.stats.armorperlevel*12)).toFixed(1)}</td>
+          <td>${((champions.stats.armor) +(champions.stats.armorperlevel*18)).toFixed(1)}</td>
         </tr>
 
        <tr>
-        <th>spellblock</td>
+        <th>spellblock</th>
         <td>${champions.stats.spellblockperlevel}</td>
         <td>${champions.stats.spellblock}</td>
-        <td>${formula(6, arrayChamps, 5)}</td>
-        <td>${formula(12, arrayChamps, 5)}</td>
-        <td>${formula(18, arrayChamps, 5)}</td>
+        <td>${((champions.stats.spellblock) +(champions.stats.spellblockperlevel*6)).toFixed(1)}</td>
+        <td>${((champions.stats.spellblock) +(champions.stats.spellblockperlevel*12)).toFixed(1)}</td>
+        <td>${((champions.stats.spellblock) +(champions.stats.spellblockperlevel*18)).toFixed(1)}</td>
       </tr>
 
       </table>

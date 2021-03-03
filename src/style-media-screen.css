@@ -74,6 +74,17 @@
         }
         }
 
+/*BOTONES DE ROLES*/
+
+        @media (max-width: 670PX) {
+          .roles_li {
+            margin: 10px;
+            padding: 0;
+            margin-bottom: 0;
+            font-size: 25px;
+          }
+        }
+
 /*MODAL RESPONSIVE */
 
         @media (max-width: 900px) {
@@ -116,27 +127,33 @@
         }
 
         @media (max-width: 470px) {
-
+          /*table {
+            width: 50%;
+            height: 300px;
+          }
+*/
           #description {
             left: 180px;
-            top: 250px;
+            top: 235px;
             width: 40%;
-            font-size: 15px;
+            font-size: 11px;
           }
 
           #rol{
 
             text-align: center;
             padding: 0 0px 0px;
-            top: 350px;
+            top: 250px;
             left: 20px;
             font-size: 20px;
           }
           .default {
             text-align: left;
             padding: 0 10px 2px;
-            top: 90px;
+            top: 50px;
             width: 20%;
+            font-size: 10px;
+            left: 126px;
           }
           tr{
 
@@ -146,14 +163,15 @@
             width: 20%;
           }
 
-          /*tbody/*{
-
+         /*tbody{*/
+              /*
               text-align: left;
               padding: 0 10px 2px;
               top: 90px;
               width: 20%;
+            */
+         /* }*/
 
-          }*/
         }
 
         @media(max-width: 320px) {

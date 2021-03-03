@@ -174,7 +174,31 @@
 
         }
 
-        @media(max-width: 320px) {
+        @media(max-width: 345px) {
+
+          #name {
+            font-size: 25px;
+            top: -85px ;
+          }
+
+          #title {
+            font-size: 15px;
+            bottom: 76px;
+          }
+
+          #rol {
+            display:flex;
+            top: 320px;
+            width: 90px;
+            font-size: 16px;
+            left: 55px;
+          }
+          small{
+            position: relative;
+            top: 20px;
+            left: 45px;
+          }
+
           tr{
             text-align: left;
             padding: 0 10px 2px;
@@ -183,9 +207,17 @@
         }
 
         #description {
-          left: 180px;
-          top: 250px;
-          width: 20%;
-          font-size: 10px;
+          left: 20px;
+          top: 238px;
+          width: 85%;
+          font-size: 12px;
+        }
+
+        .default {
+          font-size: 6.5px;
+          width: 50px;
+          left: 95px;
+          top: 80px;
+          height: 60px;
         }
       }

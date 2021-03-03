@@ -143,7 +143,7 @@ const filterSearch = () => {
         <h2 id="title">${champions.title}</h2>
         <h1 id="name">${champions.name}</h1>
         <p id="description">${champions.blurb}</p>
-        <p id="rol"><small>ROL</small><br><br>${champions.tags}</p>
+        <p id="rol"><small>ROL</small><br>${champions.tags}</p>
 
         <table class="default">
 

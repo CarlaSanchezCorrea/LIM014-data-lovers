@@ -52,7 +52,7 @@ const showData = (dataImg) => {
       </tr>
 
       <tr>
-      <th>hp</th>
+        <th>hp</th>
         <td>${champions.stats.hpperlevel}</td>
         <td>${champions.stats.hp}</td>
         <td>${((champions.stats.hp) +(champions.stats.hpperlevel*6)).toFixed(1)}</td>
@@ -225,27 +225,15 @@ const filtroOrderMayorMenor =() =>{
   galleryData.innerHTML = '';
   const difficultyValue = difficulty.value;
 // console.log(difficultyValue);
-  for(let champions of orderHigher(arrayChamps)){
   if(difficultyValue === "higher"){
-    galleryData.innerHTML += `<div id ="${champions.id}" class="diff-${champions.info.difficulty}">
-    <figure>
-    <img src="${champions.splash}" class="splash">
-    <figcaption>${champions.id} - ${champions.info.difficulty}</figcaption>
-    </figure>
-    </div>`;
+      let arrayOrderHigher = orderHigher(arrayChamps);
+      showData(arrayOrderHigher)
+
   }
-}
+
    if(difficultyValue === "low"){
-    for(let champions of orderLower(arrayChamps)){
-    //let arrayOrderNM = orderLower(arrayChamps);
-   //console.log(arrayOrderNM);
-   galleryData.innerHTML += `<div id ="${champions.id}" class="diff-${champions.info.difficulty}">
-    <figure>
-    <img src="${champions.splash}" class="splash">
-    <figcaption>${champions.id} - ${champions.info.difficulty}</figcaption>
-    </figure>
-    </div>`;
-  }
+    let arrayOrderLower = orderLower(arrayChamps);
+    showData(arrayOrderLower)
 }
 }
 difficulty.addEventListener('change', filtroOrderMayorMenor);

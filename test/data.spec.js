@@ -18,7 +18,7 @@ describe('Formula Sumar', () => {
     expect(typeof suma).toBe('function');
   });
   it('returns `4`', () => {
-    expect(suma(2 , 2)).toEqual(4);
+    expect(suma(2 , 2)).toBe(4);
   });
 });
 
